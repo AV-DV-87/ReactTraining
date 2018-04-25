@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+    <script src="https://unpkg.com/react@16.3.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.3.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+<body>
+<div id="root"></div>
+
+<script type="text/babel">
+
+    //JS Vanilla Version
+    const rootElement = document.getElementById('root')
+    // const element = document.createElement('div')
+    // element.textContent = 'Hello World !'
+    // element.className = 'container'
+    // rootElement.appendChild(element)
+
+    //React Api Version
+    // const element = React.createElement(
+    //     'div',
+    //     {className: 'container',
+    //         children: 'Hello World',}
+    // )
+    // console.dir('element')
+
+    // const element = <div className="container">Hello World</div>
+
+    //JSX version
+    //some variable can be pass dynamically in JSX
+    // const content = 'Hello World'
+    // const myClassName = 'container'
+    //or you cans pass attributes and value directly in one object
+    const props = {
+        className: 'container',
+        children: 'Hello REACT'
+    }
+    const include = 'include that'
+
+    const element=(
+        <div {...props}>Hello override {include}</div>
+    )
+    //React DOM renderer
+    ReactDOM.render(element, rootElement)
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
